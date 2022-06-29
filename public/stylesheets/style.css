@@ -1,0 +1,253 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  position: relative;
+  padding: 20px 15px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: white;
+  background-color: #68A7AD;
+}
+
+header h1 {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.menu {
+  padding: 20px 50px;
+  position: relative;
+  min-height: 20px;
+  background-color: #F9F9F9;
+  border: 1px solid;
+  border-color: lightgray;
+}
+
+.button {
+  border: 1px solid;
+  border-color: #68A7AD;
+  border-radius: 6px;
+  padding: 15px;
+  color: #68A7AD;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #68A7AD;
+  color: white;
+}
+
+#clear_tag {
+  padding: 5px;
+  margin: 15px 0px 0px 15px;
+  display: block;
+  width: 80px;
+  border-color: #E5CB9F;
+  color: #E5CB9F;
+  font-size: 14px;
+  text-align: center;
+}
+
+#clear_tag.hidden {
+  display: none;
+}
+
+#clear_tag:hover {
+  background-color: #E5CB9F;
+  color: white;
+}
+
+.add_contact {
+  position: absolute;
+  top: 50%;
+  margin: -21px;
+  line-height: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  float: left;
+  padding: 10px 16px;
+}
+
+#search {
+  float: right;
+  height: 30px;
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  left: 79%;
+  margin: -18px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+.hidden {
+  display: none;
+}
+ #contacts_list {
+  margin: 0px;
+ }
+
+#contacts_list li {
+  float: left;
+  position: relative;
+  min-width: 25%;
+  height: 256px;
+  list-style: none;
+  padding: 10px 16px;
+  border: 1px solid;
+  border-color: #68A7AD;
+  border-radius: 6px;
+  text-align: left;
+  font-size: 18px;
+  margin: 15px;
+}
+
+#contacts_list li dt {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+dd {
+  margin-inline-start: 0%;
+}
+
+#contacts_list li dd {
+  padding-bottom: 5px;
+  font-size: 14px;
+}
+
+#contacts_list .button {
+  position: absolute;
+  bottom: 10%;
+  display: inline-block;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  min-width: 60px;
+}
+
+#contacts_list .delete_contact {
+  left: 45%;
+}
+
+.tag {
+  border: 1px solid;
+  border-color: black;
+  border-radius: 3px;
+  text-decoration: none;
+  color: black;
+  padding: 1px 2px;
+  margin-top: 2px;
+  display: inline-block;
+}
+
+.tag:hover {
+  font-style: italic;
+}
+
+#no-contacts {
+  padding: 60px 50px;
+  position: relative;
+  min-height: 20px;
+  background-color: #F9F9F9;
+  border: 1px solid;
+  border-color: lightgray;
+  text-align: center;
+  margin-top: 15px;
+}
+
+#no-contacts h3 {
+  font-size: 24px;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+#no-contacts .add_contact {
+  position: relative;
+  left: 50%;
+  margin-left: -70.5px;
+}
+
+#contact_form_container {
+  margin-top: 15px;
+  padding: 20px 50px;
+  position: relative;
+  min-height: 20px;
+  height: 475px;
+  background-color: #F9F9F9;
+  border: 1px solid;
+  border-color: lightgray;
+  width: 400px;
+  left: 50%;
+  margin-left: -251px;
+}
+
+#contact_form_container h2 {
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+hr {
+  margin-bottom: 16px;
+}
+
+#contact_form_container label {
+  display: inline-block;
+  font-size: 16px;
+  text-align: left;
+}
+
+#contact_form_container input {
+  display: block;
+  width: 400px;
+  height: 24px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid;
+  margin-bottom: 25px;
+  margin-top: 5px;
+}
+
+#contact_form_container input#submit_contact_form {
+  height: 40px;
+  width: 100px;
+  margin-right: 25px;
+  border-color: #68A7AD;
+  color: #68A7AD;
+  display: inline-block;
+}
+
+#contact_form_container input#submit_contact_form:hover {
+  background-color: #68A7AD;
+  color: white;
+}
+
+#contact_form_container input#cancel_contact_form:hover {
+  background-color: #68A7AD;
+  color: white;
+}
+
+#contact_form_container input#cancel_contact_form {
+  height: 40px;
+  width: 100px;
+  margin-right: 25px;
+  border-color: #68A7AD;
+  color: #68A7AD;
+  display: inline-block;
+}
+
+#contact_form_container input.invalid_field {
+  border-color: #BB6464;
+}
+
+.error_message {
+  /* display: inline-block; */
+  float: right;
+}
+.form_errors, .error_message {
+  color: #BB6464;
+  font-style: italic;
+}

@@ -1,0 +1,65 @@
+[
+  {
+    "id": 3,
+    "full_name": "Pete Hanson",
+    "email": "phanson@ls.org",
+    "phone_number": "989-767-5445",
+    "tags": "instructor"
+  },
+  {
+    "full_name": "Mar Mar O'Fallon",
+    "phone_number": "405-405-4054",
+    "email": "memar@marmalade.io",
+    "tags": "wife,family",
+    "id": 9
+  },
+  {
+    "full_name": "Luke Schumacher",
+    "phone_number": "444-444-4444",
+    "email": "lds@writing.com",
+    "tags": "friend",
+    "id": 11
+  },
+  {
+    "full_name": "Nick McGee",
+    "phone_number": "800-800-8080",
+    "email": "mcgee@byx.frat",
+    "tags": "friend, roomate",
+    "id": 12
+  },
+  {
+    "full_name": "Payton Hill",
+    "phone_number": "404-404-4040",
+    "email": "pchill@mountains.com",
+    "tags": "friend, roomate",
+    "id": 13
+  },
+  {
+    "full_name": "Nick Miller",
+    "phone_number": "555-867-5309",
+    "email": "nm@capstone.ls",
+    "tags": "instructor",
+    "id": 14
+  },
+  {
+    "full_name": "Mary O'Fallon",
+    "phone_number": "656-656-5566",
+    "email": "mnofallon@mom.awesome",
+    "tags": "mother,family",
+    "id": 16
+  },
+  {
+    "full_name": "Caitlyn Clements",
+    "phone_number": "454-545-4455",
+    "email": "c8@caines.com",
+    "tags": "sister,twin sister,family",
+    "id": 17
+  },
+  {
+    "full_name": "Molly O'Fallon",
+    "phone_number": "322-233-2323",
+    "email": "molly@fam.com",
+    "tags": "sister,family",
+    "id": 18
+  }
+]

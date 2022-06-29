@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Contact Manager</title>
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <script src="/javascripts/handlebars.js"></script>
+</head>
+<body>
+  <header class="header">
+    <h1>Contact Manager</h1>
+  </header>
+  <main>
+    <div class="menu">
+      <a href="#" class="button add_contact">Add Contact</a>
+      <input type="text" name="search" id="search" placeholder="Search">
+    </div>
+    <a href="#" id="clear_tag" class="button hidden">Clear Tag</a>
+    <div id="contacts">
+      
+    </div>
+
+    <div id="contact_form_container" class="hidden">
+      
+    </div>
+  </main>
+
+  <script type="text/x-handlebars" id="contact-list-template">
+    {{#if this}}
+    <ul id="contacts_list">
+      {{#each this}}
+        {{> contact-template}}
+      {{/each}}
+    </ul>
+    {{else}}
+      {{> no-contacts-template}}
+    {{/if}}
+  </script>
+
+  <script type="text/x-handlebars" id="contact-template" data-type="partial">
+    <li data-id="{{id}}">
+      <h3>{{full_name}}</h3>
+      <dl>
+        <dt>Phone Number:</dt>
+        <dd>{{phone_number}}</dd>
+        <dt>Email:</dt>
+        <dd>{{email}}</dd>
+        {{> tags_template}}
+      </dl>
+      <a href="#" class="button edit_contact">Edit</a>
+      <a href="#" class="button delete_contact">Delete</a>
+    </li>
+  </script>
+  
+  <script type="text/x-handlebars" id="no-contacts-template" data-type="partial">
+    <div id="no-contacts">
+      <h3>No contacts...</h3>
+      <a href="#" class="button add_contact">Add Contact</a>
+    </div>
+  </script>
+
+  <script type="text/x-handlebars" id="tags_template" data-type="partial">
+    <dt>Tags:</dt>
+    <dd>
+      {{#each tags}}
+        <a href="#" class="tag">{{this}}</a>
+      {{/each}}
+    </dd>
+  </script>
+
+  <script type="text/x-handlebars" id="form_template">
+    <form action="#" novalidate>
+      <h2>Create Contact</h2><hr>
+      <p class="form_errors"></p>
+      {{#if id}}
+        <input type="hidden" name="id" value="{{id}}">
+      {{/if}}
+      <label for="full_name">Full Name</label>
+      <span class="error_message"></span>
+      <input type="text" name="full_name" id="name" value="{{full_name}}" required>
+      
+
+      <label for="phone_number">Phone Number</label>
+      <span class="error_message"></span>
+      <input type="tel" name="phone_number" id="phone" value="{{phone_number}}" required placeholder="555-555-5555" pattern="^(\d{3}-){2}\d{4}$">
+      
+
+      <label for="email">Email</label>
+      <span class="error_message"></span>
+      <input type="email" name="email" id="email" value="{{email}}" required placeholder="someone@email.com" pattern=".+@.+">
+      
+
+      <label for="tags">Tags</label>
+      <span class="error_message"></span>
+      <input type="text" name="tags" id="tags" value="{{tags}}">
+      
+
+      <input type="submit" value="Submit" id="submit_contact_form">
+      <input type="button" value="Cancel" id="cancel_contact_form">
+    </form>
+  </script>
+
+  <script src="javascripts/app.js"></script>
+</body>
+</html>
